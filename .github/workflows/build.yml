@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [feishu]
+        repos: [linux-xanmod]
 
       fail-fast: false
       
@@ -32,36 +32,36 @@ jobs:
         artifacts: "./*/*.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
 
-  buildNonAUR:
-    strategy:
-      matrix:
-        PKGBUILDs: [linux-harvies]
+#   buildNonAUR:
+#     strategy:
+#       matrix:
+#         PKGBUILDs: [linux-harvies]
 
-      fail-fast: false
+#       fail-fast: false
       
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - name: Build Non-AUR packages
-        id: makepkg
-        uses: edlanglois/pkgbuild-action@v1
-        with:
-          pkgdir: ${{ matrix.PKGBUILDs }}
-          aurDeps: true
+#       - name: Build Non-AUR packages
+#         id: makepkg
+#         uses: edlanglois/pkgbuild-action@v1
+#         with:
+#           pkgdir: ${{ matrix.PKGBUILDs }}
+#           aurDeps: true
           
-      - uses: actions/upload-artifact@v2
-        with:
-          path: ${{ matrix.PKGBUILDs }}/*.pkg.tar.zst
-          name: ${{ matrix.PKGBUILDs }}
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           path: ${{ matrix.PKGBUILDs }}/*.pkg.tar.zst
+#           name: ${{ matrix.PKGBUILDs }}
       
-      - uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          tag: "packages"
-          artifacts: ${{ steps.makepkg.outputs.pkgfile0 }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+#       - uses: ncipollo/release-action@v1
+#         with:
+#           allowUpdates: true
+#           tag: "packages"
+#           artifacts: ${{ steps.makepkg.outputs.pkgfile0 }}
+#           token: ${{ secrets.GITHUB_TOKEN }}
           
 #   uploadToOnedrive:      
 #     runs-on: ubuntu-latest
