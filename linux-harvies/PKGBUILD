@@ -8,8 +8,8 @@
 
 #pkgbase=linux-mainline               # Build stock -ARCH kernel
 pkgbase=linux-harvies       # Build kernel with a different name
-_tag=v5.14-rc7
-pkgver=5.14rc7
+_tag=v5.14
+pkgver=5.14
 pkgrel=1
 pkgdesc="Linux Mainline"
 arch=(x86_64)
@@ -32,7 +32,7 @@ validpgpkeys=(
   'A2FF3A36AAA56654109064AB19802F8B0D70FC30'  # Jan Alexander Steffens (heftig)
 )
 sha256sums=('SKIP'
-            'cca1c82f8919b254156c42cc0e41aded20053dfba37960eec0a32657eecd79d2')
+            'SKIP')
 
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
