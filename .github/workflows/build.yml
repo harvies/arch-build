@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [feishu]
+        repos: [elasticsearch-analysis-ik]
 
       fail-fast: false
       
