@@ -35,7 +35,7 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [linux-harvies]
+        PKGBUILDs: [linux-harvies,vmware-workstation]
 
       fail-fast: false
       
