@@ -7,7 +7,7 @@
 # Maintainer: Thomas Baechler <thomas@archlinux.org>
 
 #pkgbase=linux-mainline               # Build stock -ARCH kernel
-pkgbase=linux-harvies       # Build kernel with a different name
+pkgbase=linux       # Build kernel with a different name
 _tag=v5.14
 pkgver=5.14
 pkgrel=1
@@ -21,7 +21,7 @@ makedepends=(
   git
 )
 options=('!strip')
-_srcname=linux-harvies
+_srcname=linux
 source=(
   "$_srcname::git+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git#tag=$_tag"
   config         # the main kernel config file

@@ -35,7 +35,11 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
+<<<<<<< HEAD
         PKGBUILDs: [vmware-workstation]
+=======
+        PKGBUILDs: [linux]
+>>>>>>> f8a9b13 (linux)
 
       fail-fast: false
       
