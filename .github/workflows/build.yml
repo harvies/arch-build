@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [linux-xanmod-git]
+        repos: [linux-xanmod-git-headers]
 
       fail-fast: false
       
