@@ -1,0 +1,10 @@
+tmp/
+
+src
+pkg
+*.deb
+*.rpm
+*.log
+*.xz
+*.zst
+
